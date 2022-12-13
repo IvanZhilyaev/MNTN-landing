@@ -1,0 +1,124 @@
+@mixin heading1 {
+    font-family: 'Chronicle SB';
+    color: white;
+    font-size: 88px;
+    line-height: 100px;
+    text-transform: capitalize;
+    width: 950px;
+}
+
+@mixin heading2 {
+    font-family: 'Chronicle SB';
+    font-size: 64px;
+    line-height: 77px;
+    color: white;
+    width: 555px;
+}
+
+@mixin heading3 {
+     font-family: 'Chronicle';
+     color: white;
+     font-size: 32px;
+     line-height: 38px;
+     letter-spacing: 0.01em;
+     text-transform: uppercase;
+}
+
+@mixin heading4 {
+     color: #FBD784;
+     font-family: 'Gilroy BD';
+     font-size: 18px;
+     line-height: 22px;
+     letter-spacing: 6px;
+     text-transform: uppercase;
+}
+
+@mixin heading4-footer {
+     font-family: 'Gilroy SB';
+     font-size: 24px;
+     line-height: 32px;
+     font-style: normal;
+     text-transform: none;
+     letter-spacing: normal;
+}
+
+@mixin heading5 {
+     color: white;
+     font-family: 'Gilroy SB';
+     font-size: 18px;
+     line-height: 22px;
+}
+
+@mixin paragraph {
+     color: white;
+     width: 632px;
+     font-family: 'Gilroy SB';
+     font-size: 18px;
+     line-height: 32px;
+     margin-bottom: 27px;
+     margin-top: 27px;
+}
+
+@mixin paragraph-footer {
+     font-family: 'Gilroy R';
+     font-size: 18px;
+     line-height: 32px;
+     font-style: normal;
+     opacity: 0.5;
+}
+
+@mixin link-in-footer {
+     font-family: 'Gilroy R';
+     font-style: normal;
+     font-size: 18px;
+     line-height: 32px;
+     color: white;
+     margin-top: 24px;
+
+}
+
+@mixin before-title {
+     margin-bottom: 32px;
+     margin-left: 105px;
+     position: relative;
+
+     &:before {
+          content: "";
+          position: absolute;
+          width: 72px;
+          border: 1px solid #FBD784;
+          top: 8.5px;
+          left: -100px;
+     }
+}
+
+@mixin after-title {
+     display: inline-block;
+     background: url(../img/arrow.png) center no-repeat;
+     background-position: right;
+     padding-right: 40px;
+}
+
+@mixin numb {
+     position: absolute;
+     color: white;
+     opacity: 0.1;
+     font-size: 240px;
+     line-height: 240px;
+     font-family: 'Gilroy SB';
+}
+
+@mixin level {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     position: relative;
+}
+
+@mixin level-reverse {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     flex-direction: row-reverse;
+     position: relative;
+}

@@ -1,0 +1,259 @@
+@import "../scss/mixin";
+@import "../scss/fonts";
+
+
+/*Обнуление*/
+*{padding: 0; margin: 0; border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height: 100%; width: 100%; font-size: 100%; line-height: 1; font-size: 14px; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -webkit-text-size-adjust: 100%}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+/*-------------------*/
+
+%after-title {
+    margin-bottom: 32px;
+    margin-left: 105px;
+    position: relative;
+
+    &:before {
+        content: "";
+
+        position: absolute;
+        width: 72px;
+        border: 1px solid #FBD784;
+        top: 8.5px;
+        left: -100px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url(../img/background.png) center no-repeat;
+    background-size: 1920px 1913px;
+    background-position-y: 0;
+    h1 {
+        @include heading1();
+    }
+
+    h2 {
+        @include heading2();
+    }
+
+    h3 {
+        @include heading3();
+    }
+
+    h4 {
+        @include heading4();
+    }
+
+    h5 {
+        @include heading5();
+    }
+
+    p {
+        @include paragraph();
+    }
+
+    .container {
+        width: 1300px;
+        margin: 0 auto;
+    }
+
+    header {
+        padding-top: 58px;
+
+        .navbar {
+
+            .menu {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                a {
+                    color: #fff;
+                }
+
+                li:first-child >h2 {
+                    text-transform: uppercase;
+                    font-size: 32px;
+                    line-height: 38px;
+                    letter-spacing: 0.01em;
+                }
+                li:nth-child(2) {
+                    display: flex;
+                    align-items: center;
+
+                    h5 {
+                        margin-right: 40px;
+                    }
+                }
+                li:last-child {
+                    background: url(../img/cart.png) center no-repeat;
+                    background-position: left;
+                    padding-left: 32px;
+                }
+            }
+        }
+
+        .heading {
+            margin-top: 199px;
+            display: inline-block;
+            margin-left: 15%;
+
+
+            .before-title {
+                @include before-title();
+            }
+        }
+    }
+
+    main {
+        background: linear-gradient(180deg, rgba(11, 29, 38, 0) 18%, #0B1D26 32.38%) center no-repeat;
+        background-position-y: 0px;
+        padding-top: 1100px;
+
+        .about-us-section {
+            .what-level {
+                margin-bottom: 200px;
+                @include level();
+
+                .before-title {
+                    display: inline-block;
+                    @include before-title();
+                }
+
+                .after-title {
+                    @include after-title();
+                }
+
+                &::before {
+                    content: "01";
+                    @include numb();
+                    top: 40px;
+                    left: -60px;
+                }
+            }
+
+            .picking-the-right {
+                margin-bottom: 200px;
+                @include level-reverse();
+
+                .before-title {
+                    display: inline-block;
+                    @include before-title();
+                }
+
+                .after-title {
+                    @include after-title();
+                }
+
+                &::before {
+                    content: "02";
+                    @include numb();
+                    top: 40px;
+                    left: 610px;
+                }
+            }
+
+            .understand-your-map {
+                margin-bottom: 200px;
+                @include level();
+
+                .before-title {
+                    display: inline-block;
+                    @include before-title();
+                }
+
+                .after-title {
+                    @include after-title();
+                }
+
+                &::before {
+                    content: "03";
+                    @include numb();
+                    top: 40px;
+                    left: -60px;
+                }
+            }
+
+        }
+
+        footer {
+            
+            .container {
+                display: flex;
+                justify-content: space-between;
+                
+                .desc {
+
+                    .title {
+                        h2 {
+                            text-transform: uppercase;
+                            font-size: 32px;
+                            line-height: 38px;
+                            letter-spacing: 0.01em;
+                        }
+                        p {
+                            margin-top: 24px;
+                            width: 303px;
+                        }
+                        margin-bottom: 122px
+                    }
+                    
+                    >p {
+                        @include paragraph-footer();
+                    }
+                }
+                .links {
+
+                    .blog {
+                        display: flex;
+                    }
+
+                    .more .title h4 {
+                        @include heading4-footer();
+                    }
+                    .mntn .title h4 {
+                        @include heading4-footer();
+                    }
+
+                    .mntn {
+                        margin-left: 212px;
+                    }
+
+
+                    .menu {
+                        margin-top: 24px;
+                    }
+                    
+                    .menu > li {
+                        margin-bottom: 16px;
+                    }
+
+                    .menu > li a {
+                        @include link-in-footer();
+                    }
+
+                    
+                }
+            }
+            
+        }
+    }
+    
+}
